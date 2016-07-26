@@ -1,0 +1,50 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportHeight="800"
+    android:viewportWidth="800">
+    <group
+        android:name="ball_group"
+        android:pivotX="400"
+        android:pivotY="400"
+        android:rotation="0"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:translateX="0">
+
+        <path
+            android:name="white"
+            android:fillColor="@android:color/white"
+            android:pathData="M200,400 A200,200,0,1,0,600,400 L450,400 A50,50,0,1,1,350,400 L200,400" />
+
+        <group
+            android:name="ball_top"
+            android:rotation="0"
+            android:scaleX="1.0"
+            android:scaleY="1.0"
+            android:translateY="0">
+            <path
+                android:name="red"
+                android:fillColor="@android:color/holo_red_dark"
+                android:pathData="M200,400 A200,200,0,1,1,600,400" />
+
+            <path
+                android:name="center"
+                android:fillColor="@android:color/white"
+                android:pathData="M350,400 A50,50,0,1,0,450,400 A50,50,0,1,0,350,400" />
+
+            <path
+                android:name="black"
+                android:pathData="M200,400 L350,400 A50,50,0,1,1,450,400 A50,50,0,1,1,350,400 M450,400 L600,400"
+                android:strokeColor="@android:color/black"
+                android:strokeWidth="20" />
+
+            <clip-path
+                android:name="clip"
+                android:pathData="M200,400 L 400,400, L400,200 z"
+                />
+
+        </group>
+
+    </group>
+</vector>
